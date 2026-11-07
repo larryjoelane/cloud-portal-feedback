@@ -1,0 +1,38 @@
+name: Feature request
+description: Something Cloud Portal should do, or do better.
+labels: ["feature"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for the idea. Not sure yet, or want to talk it through first? Start a discussion in **Ideas** instead.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Apps and deploying
+        - Building images
+        - Coding agent
+        - Namespaces and budgets
+        - Signing in and accounts
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What you're trying to do
+      description: The problem or task, rather than the solution. What gets in the way today?
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would help
+      description: How you imagine it working, if you have an idea.
+  - type: textarea
+    id: today
+    attributes:
+      label: How you manage today
+      description: Any workaround you use now.

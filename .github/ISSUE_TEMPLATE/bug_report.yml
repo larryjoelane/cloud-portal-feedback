@@ -1,0 +1,58 @@
+name: Bug report
+description: Something in Cloud Portal doesn't work as it should.
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug. A security problem? Don't file it here: report it privately (see SECURITY.md).
+        Please leave out passwords, tokens and other secrets, including in screenshots and logs.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where
+      options:
+        - Deploying or editing an app
+        - Building an image
+        - Coding agent
+        - Coding agent, Save to GitHub
+        - Namespaces and budgets
+        - Signing in
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: And what you expected instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: How to make it happen
+      description: The steps, as exactly as you can.
+      placeholder: |
+        1. Open …
+        2. Click …
+        3. See …
+    validations:
+      required: true
+  - type: textarea
+    id: messages
+    attributes:
+      label: Messages or log lines
+      description: Any error shown on the page, or the end of a build or app log. Remove secrets first.
+      render: text
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: Chrome 131 on Windows 11
+  - type: input
+    id: when
+    attributes:
+      label: When it happened
+      description: Date and rough time, with time zone. It helps find the matching logs.
+      placeholder: 2026-11-07 around 14:30 CET
